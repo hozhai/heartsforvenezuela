@@ -1,5 +1,11 @@
 @import 'tailwindcss';
+@import 'tailwindcss/preflight.css' layer(base);
 @plugin '@tailwindcss/typography';
 @plugin "daisyui" {
 	themes: light --default;
+}
+
+@theme {
+	--font-display: 'Schoolbell', cursive;
+	--font-sans: 'Poppins', sans-serif;
 }
