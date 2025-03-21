@@ -1,0 +1,5 @@
+[[language]]
+name = "svelte"
+file-types = ["svelte", "md"]
+language-servers = ["svelteserver", "tailwindcss-language-server", "typescript-language-server"]
+formatter = { command = "prettier", args = ["--stdin"]}
