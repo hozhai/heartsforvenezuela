@@ -15,3 +15,15 @@
 		transform: translate(calc(-50% - 0.5rem));
 	}
 }
+
+@media (prefers-reduced-motion) {
+	html,
+	body {
+		scroll-behavior: auto !important;
+	}
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}

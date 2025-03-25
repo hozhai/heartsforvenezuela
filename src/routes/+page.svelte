@@ -2,6 +2,7 @@
 	import * as m from '../paraglide/messages';
 
 	import Navbar from '$lib/components/ui/Navbar.svelte';
+	import { Motion } from 'svelte-motion';
 
 	import SparklesText from '$lib/components/ui/SparklesText.svelte';
 	import InfiniteScrollingCards from '$lib/components/ui/InfiniteScrollingCards.svelte';
@@ -9,7 +10,7 @@
 
 	import { Info, Smile } from 'lucide-svelte';
 
-	let current_donated = 32149;
+	let current_donated = 1111;
 
 	let { data } = $props();
 </script>
@@ -18,9 +19,9 @@
 	<title>Hearts for Venezuela</title>
 </svelte:head>
 
-<Navbar />
+<Navbar currentRoute="home" />
 
-<header class="flex flex-col items-center justify-center bg-amber-50 py-32">
+<header class="relative flex flex-col items-center justify-center bg-amber-50 px-40 py-32">
 	<div class="flex flex-col items-center space-x-0 lg:flex-row">
 		<div class="relative flex flex-col items-center justify-center lg:block">
 			<h1 class="font-display w-[80%] text-center text-7xl lg:text-left lg:text-8xl">
@@ -49,8 +50,30 @@
 
 		<div class="font-display mt-10 rotate-[220deg] text-9xl text-red-400 lg:mt-0">&lt;3</div>
 	</div>
+
+	<Motion initial={{ opacity: 0 }} let:motion>
+		<div class="absolute bottom-0 left-1/2 translate-x-1/2" use:motion>
+			<svg>
+				<circle
+					cx={128}
+					cy={128}
+					r={124}
+					stroke="var(--color-orange-400)"
+					stroke-width={2}
+					fill="var(--color-amber-100)"
+				/>
+				<text
+					x={100}
+					y={90}
+					font-size={48}
+					transform="rotate(90 90, 90)"
+					fill="var(--color-amber-400)">:)</text
+				>
+			</svg>
+		</div>
+	</Motion>
 </header>
-<section class="flex h-24 w-full items-center justify-evenly space-x-16 bg-red-50 px-48">
+<section class="z-10 flex h-24 w-full items-center justify-evenly space-x-16 bg-red-50 px-48">
 	<div class="text-center">
 		<!-- todo: make sure the current donated count is grabbed from stripe api -->
 		<h3 class="font-mono text-2xl font-bold text-black">
@@ -75,7 +98,11 @@
 
 <section class="flex h-24 w-full flex-col items-center justify-center bg-red-50 px-48">
 	<blockquote class="font-display text-3xl">
-		"It's not how much we give but how much love we put into giving."
+		"{m.teresa_quote()}"
 	</blockquote>
-	<p class="font-sans">- Mother Teresa</p>
+	<p class="font-sans">- {m.teresa_name()}</p>
+</section>
+
+<section class="font-display h-24 bg-amber-50 px-32 pt-18 text-4xl">
+	<h1>How to help! &lt;3</h1>
 </section>

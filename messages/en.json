@@ -5,7 +5,7 @@
 	"club_description": "A completely non-profit student-led organization to better immigrant lives. Help us show our heart to the world! <3",
 	"donate_button": "Donate Now!!!",
 	"learn_more_button": "Learn More",
-	"current_donated": "current donated",
+	"current_donated": "currently donated",
 	"donation_goal": "donation goal",
 	"quote_message_1": "I want to thank the school Nido de Aguilas for the chance to eat and to benefit from your help. A million thanks. May God bless you all. Thank you so much.",
 	"quote_author_1": "The Pierre Family",
@@ -15,5 +15,7 @@
 	"quote_author_3": "Contreras Cay Maria",
 	"quote_message_4": "Hearts for Venezuela, thank you Ms. Gisela Q., we'd like to thank for your unconditional support through giving us these gifts that we know how to enjoy!",
 	"quote_author_4": "The Trujilo Diaz Family",
-	"quote_families": "Messages from families"
+	"quote_families": "Messages from families (translated from Spanish)",
+	"teresa_quote": "It's not how much we give, but how much love we put into giving.",
+	"teresa_name": "Mother Teresa"
 }
