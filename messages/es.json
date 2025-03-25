@@ -1,4 +1,19 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"header_1": "Un futuro mejor para TOD@S."
+	"header_1": "Un futuro mejor para",
+	"header_1_all": "TOD@S",
+	"club_description": "Una organización completamente sin fines de lucro liderado por alumnos. Ayudanos a mostrar nuestro amor al mundo! <3",
+	"donate_button": "Donar Ahora!!!",
+	"learn_more_button": "Aprender Más",
+	"current_donated": "fondos recaudado",
+	"donation_goal": "meta de fondos",
+	"quote_message_1": "posibilidad de comer y beneficiar de su ayuda. Un millón de gracias. Dios bendiga a todos uds. Thank you so much.",
+	"quote_author_1": "Familia Pierre",
+	"quote_message_2": "Se siente agradecida con Dios y con cada uno de ustedes, que dedicaron de su tiempo para bendecirnos en este día tan \"Especial\".",
+	"quote_author_2": "Familia Valera Fernández",
+	"quote_message_3": "Queremos agradecer al colegio Nido de Aguila y a Hearts for Venezuela por su linda iniciativa y colaboración con nuestra comunidad de Venezolanos en Chile, a la labor realizada por sus estudiantes. Muchas bendiciones y gracias.",
+	"quote_author_3": "Contreras Cay Maria",
+	"quote_message_4": "Heart for Venezuela, gracias Sra Gisela Q., queremos agradecer su apoyo incondicional al darnos su regalo que sabemos disfrutar!",
+	"quote_author_4": "Familia Trujilo Diaz",
+	"quote_families": "Mensajes de familias"
 }

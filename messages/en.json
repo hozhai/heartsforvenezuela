@@ -1,5 +1,19 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"header_1": "A brighter future for us",
-	"header_1_all": "ALL"
+	"header_1_all": "ALL",
+	"club_description": "A completely non-profit student-led organization to better immigrant lives. Help us show our heart to the world! <3",
+	"donate_button": "Donate Now!!!",
+	"learn_more_button": "Learn More",
+	"current_donated": "current donated",
+	"donation_goal": "donation goal",
+	"quote_message_1": "I want to thank the school Nido de Aguilas for the chance to eat and to benefit from your help. A million thanks. May God bless you all. Thank you so much.",
+	"quote_author_1": "The Pierre Family",
+	"quote_message_2": "We feel grateful to God and to every single one of you who dedicated your time to bless us on this day that's so 'special'.",
+	"quote_author_2": "The Valera Fernández Family",
+	"quote_message_3": "We would like to thank the school Nido de Aguilas and Hearts for Venezuela for the kind initiative and colaboration with our Venezuelan community here in Chile, and thanks to the work made by the students. May God bless you, and thank you.",
+	"quote_author_3": "Contreras Cay Maria",
+	"quote_message_4": "Hearts for Venezuela, thank you Ms. Gisela Q., we'd like to thank for your unconditional support through giving us these gifts that we know how to enjoy!",
+	"quote_author_4": "The Trujilo Diaz Family",
+	"quote_families": "Messages from families"
 }

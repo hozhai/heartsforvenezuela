@@ -9,3 +9,9 @@
 	--font-display: 'Schoolbell', cursive;
 	--font-sans: 'Poppins', sans-serif;
 }
+
+@keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 0.5rem));
+	}
+}

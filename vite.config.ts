@@ -6,8 +6,8 @@ import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
 	plugins: [
-		paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
 		enhancedImages(),
+		paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
 		sveltekit(),
 		tailwindcss()
 	]
