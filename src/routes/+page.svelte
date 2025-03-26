@@ -7,12 +7,44 @@
 	import SparklesText from '$lib/components/ui/SparklesText.svelte';
 	import InfiniteScrollingCards from '$lib/components/ui/InfiniteScrollingCards.svelte';
 	import NumberTicker from '$lib/components/ui/NumberTicker.svelte';
+	import Features from '$lib/components/ui/Features.svelte';
 
-	import { Info, Smile } from 'lucide-svelte';
+	import { Info, Smile, CircleUser, HandCoins } from 'lucide-svelte';
 
 	let current_donated = 1111;
 
 	let { data } = $props();
+
+	let dataFeatures = [
+		{
+			id: 1,
+			title: '1. Sign Up',
+			content: 'Quickly sign in through Google or simply by E-Mail and password!',
+			image: 'https://i.pinimg.com/736x/ca/aa/49/caaa49d386d84f2d037d0abcc919778f.jpg',
+			icon: CircleUser
+		},
+		{
+			id: 2,
+			title: '2. Click on Donate',
+			content: 'Click!',
+			image: 'https://i.pinimg.com/736x/a5/dc/0a/a5dc0af50d185b7f9111949b17e17e1a.jpg',
+			icon: HandCoins
+		},
+		{
+			id: 3,
+			title: '3. Fill out your information',
+			content: 'Info!',
+			image: 'https://i.pinimg.com/736x/b1/b9/c2/b1b9c230143fb0d8540eabe5b74adf27.jpg',
+			icon: Info
+		},
+		{
+			id: 4,
+			title: "4. Help make someone's life better!",
+			content: 'Donate!',
+			image: 'https://i.pinimg.com/736x/b1/b9/c2/b1b9c230143fb0d8540eabe5b74adf27.jpg',
+			icon: Info
+		}
+	];
 </script>
 
 <svelte:head>
@@ -103,6 +135,8 @@
 	<p class="font-sans">- {m.teresa_name()}</p>
 </section>
 
-<section class="font-display h-24 bg-amber-50 px-32 pt-18 text-4xl">
-	<h1>How to help! &lt;3</h1>
+<section class="bg-amber-50 px-64 pt-18">
+	<h1 class="font-display text-5xl">How to help! &lt;3</h1>
+
+	<Features data={dataFeatures} />
 </section>
