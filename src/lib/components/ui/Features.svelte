@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
+	import type { Picture } from 'vite-imagetools';
 
 	interface Props {
 		collapseDelay?: number;
@@ -10,7 +11,7 @@
 			id: number;
 			title: string;
 			content: string;
-			image?: string;
+			image?: Picture;
 			video?: string;
 			icon?: any;
 		}>;
@@ -22,10 +23,10 @@
 	let carouselRef: HTMLUListElement | null | undefined = $state();
 
 	onMount(() => {
-		let timmer = setTimeout(() => {
+		let timer = setTimeout(() => {
 			currentIndex.set(0);
 		}, 100);
-		return () => clearTimeout(timmer);
+		return () => clearTimeout(timer);
 	});
 	onMount(() => {
 		handleScroll();
@@ -47,7 +48,7 @@
 <section id="features">
 	<div class="container">
 		<div class="mx-auto">
-			<div class="mx-auto my-12 grid h-full items-center gap-10 lg:grid-cols-2">
+			<div class="mx-auto my-12 grid h-full place-items-start gap-10 lg:grid-cols-2">
 				<div
 					class="order-1 hidden lg:order-none lg:flex {ltr
 						? 'lg:order-2 lg:justify-end'
@@ -109,11 +110,10 @@
 
 				<div class={`h-[350px] min-h-[200px] w-auto ${ltr && 'lg:order-1'}`}>
 					{#if data[$currentIndex]?.image}
-						<img
+						<enhanced:img
 							src={data[$currentIndex].image}
 							alt="feature"
-							height={400}
-							class="aspect-auto size-full rounded-xl border border-neutral-300/50 object-cover object-left-top p-1 shadow-lg"
+							class="aspect-auto h-fit rounded-lg object-cover object-left-top"
 						/>
 					{:else if data[$currentIndex]?.video}
 						<video

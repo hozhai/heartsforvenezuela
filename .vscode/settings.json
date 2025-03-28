@@ -2,5 +2,8 @@
   "i18n-ally.localesPaths": [
     "messages",
     "src/paraglide/messages"
+  ],
+  "cSpell.words": [
+    "paraglide"
   ]
 }

@@ -9,6 +9,11 @@
 	import NumberTicker from '$lib/components/ui/NumberTicker.svelte';
 	import Features from '$lib/components/ui/Features.svelte';
 
+	import family_1 from '$lib/images/h4v/family_1.webp?enhanced';
+	import family_2 from '$lib/images/h4v/family_2.webp?enhanced';
+	import gifts_1 from '$lib/images/h4v/gifts_4.webp?enhanced';
+	import activity_3 from '$lib/images/h4v/activity_3.webp?enhanced';
+
 	import { Info, Smile, CircleUser, HandCoins } from 'lucide-svelte';
 
 	let current_donated = 1111;
@@ -20,28 +25,31 @@
 			id: 1,
 			title: '1. Sign Up',
 			content: 'Quickly sign in through Google or simply by E-Mail and password!',
-			image: 'https://i.pinimg.com/736x/ca/aa/49/caaa49d386d84f2d037d0abcc919778f.jpg',
+			image: family_1,
 			icon: CircleUser
 		},
 		{
 			id: 2,
 			title: '2. Click on Donate',
-			content: 'Click!',
-			image: 'https://i.pinimg.com/736x/a5/dc/0a/a5dc0af50d185b7f9111949b17e17e1a.jpg',
+			content:
+				'One click for you to make the world better, and another for you to select how much you want to contribute!',
+			image: family_2,
 			icon: HandCoins
 		},
 		{
 			id: 3,
 			title: '3. Fill out your information',
-			content: 'Info!',
-			image: 'https://i.pinimg.com/736x/b1/b9/c2/b1b9c230143fb0d8540eabe5b74adf27.jpg',
+			content:
+				"Your information is filled with Stripe, a third-party purchase provider, meaning your information stays safe with them and we don't save anything!",
+			image: gifts_1,
 			icon: Info
 		},
 		{
 			id: 4,
 			title: "4. Help make someone's life better!",
-			content: 'Donate!',
-			image: 'https://i.pinimg.com/736x/b1/b9/c2/b1b9c230143fb0d8540eabe5b74adf27.jpg',
+			content:
+				"And you're done! A kid just got a new blanket to help them stay warm in winter and some parents just got more food for their family!",
+			image: activity_3,
 			icon: Info
 		}
 	];
@@ -135,8 +143,10 @@
 	<p class="font-sans">- {m.teresa_name()}</p>
 </section>
 
-<section class="bg-amber-50 px-64 pt-18">
-	<h1 class="font-display text-5xl">How to help! &lt;3</h1>
+<section class="bg-amber-50 px-48 py-18">
+	<h1 class="font-display text-6xl">
+		How to help! <span class="text-7xl text-red-400">&lt;3</span>
+	</h1>
 
 	<Features data={dataFeatures} />
 </section>
