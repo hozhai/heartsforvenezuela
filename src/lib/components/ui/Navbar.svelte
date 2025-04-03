@@ -37,6 +37,9 @@
 					<li><a class={currentRoute == 'home' ? 'menu-focus' : ''} href="/">Home</a></li>
 					<li><a class={currentRoute == 'blogs' ? 'menu-focus' : ''} href="/blogs">Blogs</a></li>
 					<li><a class={currentRoute == 'donate' ? 'menu-focus' : ''} href="/donate">Donate</a></li>
+					<li>
+						<a class={currentRoute == 'account' ? 'menu-focus' : ''} href="/account">Sign In</a>
+					</li>
 				</ul>
 			</div>
 		</div>

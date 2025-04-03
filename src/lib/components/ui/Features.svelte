@@ -67,7 +67,7 @@
 										<div
 											class="absolute top-0 left-0 w-full {$currentIndex === index
 												? 'h-full'
-												: 'h-0'} bg-primary origin-top transition-all ease-linear"
+												: 'h-0'} origin-top bg-sky-300 transition-all ease-linear"
 											style="
           transition-duration: {$currentIndex === index ? `${collapseDelay}ms` : '0s'};"
 										></div>
@@ -93,12 +93,12 @@
 									</div>
 								{/if}
 								<div
-									class="item-box bg-primary/10 mx-2 flex size-12 shrink-0 items-center justify-center rounded-full sm:mx-6"
+									class="item-box mx-2 flex size-12 shrink-0 items-center justify-center rounded-full bg-sky-300/10 sm:mx-6"
 								>
-									<item.icon class="text-primary size-6" />
+									<item.icon class="size-6 text-sky-300" />
 								</div>
 								<div class="space-y-2">
-									<h3 class="text-lg font-bold lg:text-2xl">{item.title}</h3>
+									<h3 class="font-display text-lg lg:text-3xl">{item.title}</h3>
 									<div class="text-muted-foreground w-96 text-[16px]">
 										{item.content}
 									</div>
@@ -113,7 +113,7 @@
 						<enhanced:img
 							src={data[$currentIndex].image}
 							alt="feature"
-							class="aspect-auto h-fit rounded-lg object-cover object-left-top"
+							class="aspect-auto max-h-[55vh] rounded-lg object-cover object-left-top"
 						/>
 					{:else if data[$currentIndex]?.video}
 						<video

@@ -4,7 +4,6 @@ import { sha256 } from '@oslojs/crypto/sha2';
 import { encodeBase64url, encodeHexLowerCase } from '@oslojs/encoding';
 import { db } from '$lib/server/db';
 import * as table from '$lib/server/db/schema';
-
 const DAY_IN_MS = 1000 * 60 * 60 * 24;
 
 export const sessionCookieName = 'auth-session';
@@ -78,4 +77,19 @@ export function deleteSessionTokenCookie(event: RequestEvent) {
 	event.cookies.delete(sessionCookieName, {
 		path: '/'
 	});
+}
+
+export async function getUserFromGoogleId(googleUserId: string) {
+	const user = await db.select().from(table.user).where(eq(table.user.googleId, googleUserId));
+	return user;
+}
+
+export async function createUser(googleUserId: string, username: string) {
+	const newUser = {
+		id: crypto.randomUUID(),
+		googleId: googleUserId,
+		username
+	};
+	await db.insert(table.user).values(newUser);
+	return newUser;
 }
